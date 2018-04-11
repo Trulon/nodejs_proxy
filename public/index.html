@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>nodejs proxy</title>
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
+<script type="text/javascript">
+	var source='https://www.baidu.com';
+	var proxy='http://127.0.0.1:9010';
+	$.ajax({
+		//url:source+"/his?wd=java",
+		url:proxy+"/his?wd=java",
+		type:"get",
+		success:function(data){
+			console.log("success");
+			$("#response").html(JSON.stringify(data));
+		}
+	})
+</script>
+</head>
+
+<body>
+	index
+	<div id="response"></div>
+</body>
+
+</html>
