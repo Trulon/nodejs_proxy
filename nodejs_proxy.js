@@ -1,5 +1,5 @@
 //本项目启动端口
-const port = 9010;
+var port = process.env.PORT || 9010
 
 var express = require("express");
 var proxy = require('http-proxy-middleware');
